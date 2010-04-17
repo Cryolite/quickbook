@@ -1,0 +1,19 @@
+using quickbook ;
+
+xml main : main.qbk ;
+
+boostbook standalone
+  : main
+  : # Params for library logo
+    <xsl:param>boost.image.src\="../images/boost.png"
+    <xsl:param>boost.image.alt\="Boost C++ Libraries"
+    <xsl:param>boost.image.w\="277"
+    <xsl:param>boost.image.h\="86"
+
+    # Params for paths of iamges
+    <xsl:param>admon.graphics.path\="../images/"
+    <xsl:param>navig.graphics.path\="../images/"
+    <xsl:param>callout.graphics.path\="../images/callouts"
+
+    <xsl:param>nav.layout=none
+  ;
