@@ -1,0 +1,48 @@
+[library The Document Title
+  [quickbook 1.5]
+  [version 1.0]
+  [id the_document_name]
+  [dirname the_document_dir]
+  [copyright 2000 2002 2003 Joe Blow, Jane Doe]
+  [purpose The document's reason for being]
+  [category The document's category]
+  [authors [Blow, Joe], [Doe, Jane]]
+  [license
+    Distributed under the Boost Software License, Version 1.0.
+    (See accompanying file LICENSE_1_0.txt or copy at
+    [@http://www.boost.org/LICENSE_1_0.txt])
+  ]
+]
+
+[section Introduction]
+
+[:[*['["Why program by hand in five days what you can spend five years of your
+life automating?]]]
+
+-- Terrence Parr, author ANTLR/PCCTS
+]
+
+[endsect]
+
+[section Header <cradle/iostreams/buffer_adaptor.hpp> Synopsis]
+
+  namespace cradle {
+    template<class Device, class Allocator = std::allocator<``/unspecified-type/``> >
+    class buffer_adaptor
+    {
+    public:
+      ``=//= /types:/``
+      typedef Device device_type;
+      typedef Allocator allocator_type;
+
+      ``=//= /constructors:/``
+      buffer_adaptor();
+      buffer_adaptor(device_type const &dev,
+                     size_type buffer_size,
+                     allocator_type const &a);
+      buffer_adaptor(buffer_adaptor const &) = delete;
+      buffer_adaptor(buffer_adaptor &&) = delete;
+    };
+  }
+
+[endsect]
